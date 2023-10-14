@@ -1,4 +1,4 @@
-alert('INSTRUCCIONES: presiona BARRA ESPACIADORA o la tecla hacia A para saltar')
+alert('INSTRUCCIONES: presiona BARRA ESPACIADORA o la tecla hacia Arriba para saltar, tambien tiene disponible un botón táctil')
 
 var canvas;
 var ctx;
@@ -52,23 +52,26 @@ function AgregarEventoTeclado(){
 					BoolSaltar=true;
 				}
 			break;
-
 			case 13:
 				if(!CorrerJuego) RestablecerJuego();
 			break;
 		}
-
-
-		canvas.addEventListener('touchstart', function() {
-			if (!BoolSaltar) {
-				movSalto = -velocidadJuego;
-				BoolSaltar = true;
-			}else if (!CorrerJuego) {
-				RestablecerJuego();
-			}
-		});
 	}
 }
+
+function IniciarOSaltar() {
+    if (CorrerJuego) {
+        if (!BoolSaltar) {
+            movSalto = -velocidadJuego;
+            BoolSaltar = true;
+        }
+    } else {
+        RestablecerJuego();
+    }
+}
+
+
+
 function InicializarJSON(){
 	dinosaurio = {
 		x:PisoX,
