@@ -52,10 +52,21 @@ function AgregarEventoTeclado(){
 					BoolSaltar=true;
 				}
 			break;
+
 			case 13:
 				if(!CorrerJuego) RestablecerJuego();
 			break;
 		}
+
+
+		canvas.addEventListener('touchstart', function() {
+			if (!BoolSaltar) {
+				movSalto = -velocidadJuego;
+				BoolSaltar = true;
+			}else if (!CorrerJuego) {
+				RestablecerJuego();
+			}
+		});
 	}
 }
 function InicializarJSON(){
