@@ -10,15 +10,30 @@ canvas{
     border-radius: 24px;
     box-shadow: 2px 2px 2px black;
 }
-
 .main-container{
     background-color: blue;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .img_oculta{
     display: none;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    border: rgb(255, 255, 255) solid 2px;
+    background-color: rgba(0, 0, 255, 0);
+    color:aliceblue;
+    border-radius: 100%;
+    box-shadow: 4px 4px 2px black;
+    position: absolute;
+    bottom: 46px;
+    right: 76px;
 }
