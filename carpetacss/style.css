@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas{
+    width: 90%;
+    min-height: 600px;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.main-container{
+    background-color: blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_oculta{
+    display: none;
+}
